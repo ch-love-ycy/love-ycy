@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.love.love520.mapper.SearcherMapper">
+    <!--    <select id="selectBlog" resultType="Blog">-->
+    <!--    select * from Blog where id = #{id}-->
+    <!--  </select>-->
+
+    <!--    public Employee getEmpById(Integer id);-->
+
+    <!--    public void insertEmp(Employee employee);-->
+<!--    <select id="getNameBySearcher" resultType="String">-->
+<!--        select name from searcher where id=#{id}-->
+<!--    </select>-->
+
+    <insert id = "insertSearcher" useGeneratedKeys = "true" keyProperty = "id" parameterType = "com.love.love520.bean.Searcher">
+        insert into searcher(name,gender,birthday,url,addr) values (#{name},#{gender},#{date},#{url},#{addr})
+    </insert>
+</mapper>

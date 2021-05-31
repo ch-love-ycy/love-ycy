@@ -1,0 +1,42 @@
+spring:
+  resources:
+    static-locations: classpath:/static
+  mvc:
+    static-path-pattern: //**
+  #  resources:
+#  #这个节点配置是设置静态文件存放的路径
+#  static-locations: classpath:/static(这个是放在resources路径/类路径 下的static文件夹)
+#    mvc:
+#      #这个节点的配置是设置静态文件的访问的路径（http请求的）
+#      static-path-pattern: //**
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.171.168:3306/520?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    initialization-mode: always
+#    type: com.alibaba.druid.pool.DruidDataSource
+#       数据源其他配置
+#    initialSize: 5
+#    minIdle: 5
+#    maxActive: 20
+#    maxWait: 60000
+#    timeBetweenEvictionRunsMillis: 60000
+#    minEvictableIdleTimeMillis: 300000
+#    validationQuery: SELECT 1 FROM DUAL
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: true
+#    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+#    filters: stat,wall
+#    maxPoolPreparedStatementPerConnectionSize: 20
+#    useGlobalDataSourceStat: true
+#    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+mybatis:
+  config-location: classpath:mybaits\mybatis-config.xml
+  mapper-locations: classpath:mybaits\mapper\*.xml
+
+
+
+
